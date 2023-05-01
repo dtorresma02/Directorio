@@ -1,7 +1,6 @@
 class Modelo:
 
     def __init__(self):
-        self.nombre = ""
         self.nota1 = 0
         self.nota2 = 0
         self.nota3 = 0
