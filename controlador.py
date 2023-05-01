@@ -4,6 +4,7 @@ from modelo import Modelo
 class Controlador:
     obview = Vista()
     obmodel = Modelo()
+    obview.notas()
     obmodel.setNombre(obview.nombre)
     obmodel.setNota1(obview.nota1)
     obmodel.setNota2(obview.nota2)
