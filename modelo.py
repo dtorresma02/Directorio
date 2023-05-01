@@ -1,10 +1,14 @@
 class Modelo:
 
     def __init__(self):
+        self.nombre = ""
         self.nota1 = 0
         self.nota2 = 0
         self.nota3 = 0
         self.prom = 0
+
+    def setNombre(self, nombre):
+        self.nombre = nombre
 
     def setNota1(self, nota1):
         self.nota1 = nota1
@@ -14,6 +18,9 @@ class Modelo:
         
     def setNota3(self, nota3):
         self.nota3 = nota3
+
+    def getNombre(self):
+        return self.nombre
 
     def getNota1(self): 
         return self.nota1
