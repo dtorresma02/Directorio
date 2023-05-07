@@ -1,4 +1,5 @@
 from tkinter import *
+from controlador import Controlador
 
 class Vista:
 
@@ -21,20 +22,11 @@ class Vista:
         txtnota3 = Entry(Window)
         txtnota3.place(x=150, y=160)
 
+        def Promediar():
+            prom = Controlador.promediar(txtnota1.get(), txtnota2.get(), txtnota3.get())
+            cadena = "El promedio del estudiante " + txtnombre.get() + " es " + str(prom)
+            Label(Window, text=cadena).place(x=20, y=240)
+
+        Button(Window, text="Promediar", command=Promediar).place(x=120, y=200)
+
         lib.mainloop()
-
-        """self.nombre = ""
-        self.nota1 = 0
-        self.nota2 = 0
-        self.nota3 = 0
-
-    def notas(self):
-        print("Bienvenido al directorio de notas")
-        print("Por favor ingrese el nombre del estudiante:")
-        self.nombre = input()
-        print("Ingrese la nota 1")
-        self.nota1 = float(input())
-        print("Ingrese la nota 2")
-        self.nota2 = float(input())
-        print("Ingrese la nota 3")
-        self.nota3 = float(input())"""
